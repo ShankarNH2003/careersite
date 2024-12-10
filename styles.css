@@ -273,6 +273,102 @@ nav ul.show {
   max-width: 100%;
   height: auto;
 }
+/* Hero Section */
+.hero {
+  position: relative; /* Ensures bubbles are positioned correctly */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  overflow: hidden; /* Prevent bubbles from overflowing */
+}
+
+.hero-content {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  color: #333;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 1em;
+  color: #fff;
+}
+
+.blue-btn {
+  background-color: #1d72b8;
+}
+
+.green-btn {
+  background-color: #28a745;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Floating Bubbles */
+.floating-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1; /* Above the background, below the hero content */
+  overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparent bubble */
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+  pointer-events: all;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.bubble:hover {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+/* Keyframes for floating bubbles */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.8);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
 
 /* Features Section */
 .features {
