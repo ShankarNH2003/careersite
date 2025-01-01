@@ -233,6 +233,7 @@ nav ul li a:hover::after {
 .hero-content {
   flex: 1 1 300px;
   max-width: 600px;
+  padding-left: 60px;
 }
 
 .hero-content h1 {
